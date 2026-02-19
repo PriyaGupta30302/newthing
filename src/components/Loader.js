@@ -27,7 +27,7 @@ export default function Loader() {
     }, []);
 
     return (
-        <div ref={loaderRef} className="fixed inset-0 z-50 flex h-screen w-full">
+        <div ref={loaderRef} className="fixed inset-0 z-[9999] flex h-screen w-full">
             {[...Array(5)].map((_, i) => (
                 <div key={i} className="stripe h-full w-full bg-black"></div>
             ))}
