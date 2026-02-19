@@ -1,2 +1,7 @@
 @import "tailwindcss";
 
+@theme {
+  --font-libre: var(--font-libre);
+  --font-fira: var(--font-fira);
+  --font-sans: var(--font-geist-sans);
+}

@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Libre_Caslon_Text, Fira_Code } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -6,8 +6,14 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const libreCaslonText = Libre_Caslon_Text({
+  variable: "--font-libre",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
+
+const firaCode = Fira_Code({
+  variable: "--font-fira",
   subsets: ["latin"],
 });
 
@@ -20,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${libreCaslonText.variable} ${firaCode.variable} antialiased`}
       >
         {children}
       </body>
