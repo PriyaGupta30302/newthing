@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="max-w-[1360px] mx-auto px-4 py-20 min-h-screen">
       <div className="max-w-2xl">
-        <h1 className="text-5xl font-libre font-bold mb-6 text-gray-900">
+        <h1 className="md:text-5xl font-libre font-bold mb-6 text-gray-900">
           Design driven development
         </h1>
         <p className="text-lg font-fira text-gray-700 leading-relaxed mb-8">
