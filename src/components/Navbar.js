@@ -73,7 +73,7 @@ export default function Navbar() {
                             href="/contact"
                             className="bg-black text-[#ebe8df] px-5 py-2 rounded-full hover:bg-gray-800 transition-all text-xs uppercase cursor-pointer"
                         >
-                            Let's Talk
+                            Let&apos;s Talk
                         </Link>
                     </div>
 
