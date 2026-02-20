@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="bg-[#FDFBF7] min-h-screen pt-24 md:pt-32 flex flex-col justify-center">
+    <section className=" min-h-screen pt-24 md:pt-32 flex flex-col justify-center">
       <div className="max-w-[1360px] mx-auto w-full px-4 md:px-6 flex flex-col md:flex-row items-stretch">
         {/* Left Content Section */}
-        <div className="w-full md:w-1/2 md:pr-12 flex flex-col justify-center relative py-10 md:py-20 overflow-hidden bg-gradient-to-r from-[#FDFBF7] to-[#F3D5D0] rounded-l-lg">
+        <div className="w-full md:w-1/2 md:pr-12 flex flex-col justify-center relative py-10 md:py-20 overflow-hidden bg-gradient-to-r from-[#FDFBF7] to-[#E09F96] rounded-l-2xl">
           <div className="relative z-10 pl-8 md:pl-12 pr-4">
             <div className="inline-block border border-gray-800 rounded-lg px-3 py-1 mb-8">
               <span className="text-xs font-fira tracking-widest uppercase">
@@ -15,7 +15,7 @@ export default function HeroSection() {
               </span>
             </div>
 
-            <h1 className="text-6xl md:text-8xl font-libre font-normal mb-8 md:mb-12 text-gray-900 leading-[0.9]">
+            <h1 className="text-6xl xl:text-7xl font-libre font-normal mb-8 md:mb-12 text-gray-900 leading-[1.2] tracking-tighter">
               Designing for <span className="italic">results.</span>
             </h1>
 
@@ -36,12 +36,12 @@ export default function HeroSection() {
         </div>
 
         {/* Right Image Section */}
-        <div className="w-full md:w-1/2 relative min-h-[100vh] bg-gray-200 rounded-r-lg overflow-hidden">
+        <div className="w-full md:w-1/2 relative min-h-[85vh] bg-gray-200 rounded-r-2xl overflow-hidden">
           <Image
             src="/assets/hero-img.avif"
             alt="Designer portrait"
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
           />
         </div>
