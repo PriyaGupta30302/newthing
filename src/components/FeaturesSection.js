@@ -25,7 +25,7 @@ export default function FeaturesSection() {
   ];
 
   return (
-    <section className="py-12 md:py-20 flex justify-center px-6 xl:px-16">
+    <section className="py-12 md:py-10 flex justify-center px-6 xl:px-16">
       <div className="max-w-[1360px] w-full mx-auto bg-[#FDFBF7] rounded-2xl py-16 md:py-20 px-4 md:px-12">
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-10">

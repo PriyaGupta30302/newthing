@@ -16,12 +16,14 @@ const projects = [
     tags: ["MOBILE APP", "UI/UX"],
     image: "/assets/img-2.avif",
     gridClass: "md:col-span-2",
+    hideBg: true,
   },
   {
     title: "Conservation",
     tags: ["WEB DESIGN", "LAYOUT"],
     image: "/assets/img-3.avif",
     gridClass: "md:col-span-2",
+    hideBg: true,
   },
   {
     title: "URBAN WHEELS",
@@ -67,7 +69,7 @@ export default function WorkSection() {
   );
 
   return (
-    <section className="py-12 md:py-20 flex justify-center px-6 xl:px-16 overflow-hidden">
+    <section className="py-12 md:py-10 flex justify-center px-6 xl:px-16 overflow-hidden">
       <div
         ref={container}
         className="max-w-[1360px] w-full mx-auto bg-[#f4f4f4] rounded-2xl py-16 md:py-24 px-6 md:px-16"
@@ -80,16 +82,24 @@ export default function WorkSection() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`project-card group relative overflow-hidden rounded-2xl bg-[#ebe9df] aspect-[4/3] md:aspect-auto h-[400px] md:h-[500px] ${project.gridClass}`}
+              className={`project-card group relative overflow-hidden rounded-2xl aspect-[4/3] md:aspect-auto h-[400px] md:h-[500px] ${
+                project.gridClass
+              } ${project.hideBg ? "bg-transparent" : "bg-[#ebe9df]"}`}
             >
               {/* Image Container */}
-              <div className="absolute inset-0 flex items-center justify-center p-8 md:p-12">
+              <div
+                className={`absolute inset-0 flex items-center justify-center ${
+                  project.hideBg ? "p-0" : "p-8 md:p-12"
+                }`}
+              >
                 <div className="relative w-full h-full">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-contain transition-transform duration-700 group-hover:scale-105"
+                    className={`${
+                      project.hideBg ? "object-cover" : "object-contain"
+                    } transition-transform duration-700 group-hover:scale-105`}
                   />
                 </div>
               </div>
@@ -100,7 +110,7 @@ export default function WorkSection() {
                   {project.tags.map((tag, tIndex) => (
                     <span
                       key={tIndex}
-                      className="tag px-4 py-2 border border-white/40 rounded-full text-[10px] md:text-xs font-fira tracking-widest text-white backdrop-blur-sm"
+                      className="tag px-4 py-2 border border-white/40 rounded-full text-[10px] md:text-xs font-fira tracking-widest text-white"
                     >
                       {tag}
                     </span>

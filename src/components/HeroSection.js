@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function HeroSection() {
   return (
     <section className=" min-h-screen pt-24 md:pt-32 flex flex-col justify-center">
-      <div className="max-w-[1360px] mx-auto w-full px-4 md:px-6 flex flex-col md:flex-row items-stretch">
+      <div className="max-w-[1360px] mx-auto w-full px-4 md:px-0 flex flex-col md:flex-row items-stretch">
         {/* Left Content Section */}
         <div className="w-full md:w-1/2 md:pr-12 flex flex-col justify-center relative py-10 md:py-20 overflow-hidden bg-gradient-to-r from-[#FDFBF7] to-[#E09F96] rounded-l-2xl">
           <div className="relative z-10 pl-8 md:pl-12 pr-4">
